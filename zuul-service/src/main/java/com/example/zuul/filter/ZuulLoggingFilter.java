@@ -30,8 +30,8 @@ public class ZuulLoggingFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         log.info("::::::::::::::::::::::::::::::::printing log : ");
         RequestContext ctx = RequestContext.getCurrentContext();
-        HttpServletRequest request =ctx.getRequest();
-        log.info("::::::::::::::::::::::::::::::::printing log : "+request.getRequestURI());
+        HttpServletRequest request = ctx.getRequest();
+        log.info("::::::::::::::::::::::::::::::::printing log : " + request.getRequestURI());
         return null;
     }
 }

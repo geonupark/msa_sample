@@ -1,11 +1,22 @@
 server:
   port: 8761
-
+  address: 127.0.0.1
 spring:
   application:
     name: discoveryservice
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: ecommerce
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      default-zone: ${EUREKA_URL:localhost:8761/eureka/} # 디스커버리 주소
+      instance:
+        lease-renewal-interval-in-seconds: 5 # 디스커버리한테 1초마다 하트비트 전송  (기본 30초)
+        lease-expiration-duration-in-seconds: 5 # 디스커버리는 서비스 등록 해제 하기 전에 마지막 하트비트에서부터 2초 기다림
+  server:
+    enable-self-preservation: false

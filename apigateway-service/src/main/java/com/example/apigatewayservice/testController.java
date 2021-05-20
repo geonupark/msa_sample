@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class testController {
     @GetMapping("/test")
-    public String test(){
+    public String test() {
         return "test to the api service.";
     }
 
