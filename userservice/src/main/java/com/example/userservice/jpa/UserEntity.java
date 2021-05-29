@@ -1,7 +1,6 @@
 package com.example.userservice.jpa;
 
 import lombok.Data;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 
