@@ -1,6 +1,7 @@
 server:
   port: 0
   address: 127.0.0.1
+  shutdown: graceful
 spring:
   application:
     name: user-service
